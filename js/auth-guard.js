@@ -12,11 +12,11 @@ class AuthGuard {
     }
 
     static redirectToUserAuth() {
-        window.location.href = '/src/auth/user-auth.html';
+        window.location.href = 'src/auth/user-auth.html';
     }
 
     static redirectToUserDashboard() {
-        window.location.href = '/src/dashboard/user-dashboard.html';
+        window.location.href = 'src/dashboard/user-dashboard.html';
     }
 
     static handleUserProfileAccess() {
