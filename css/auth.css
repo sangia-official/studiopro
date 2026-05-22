@@ -21,7 +21,7 @@ body {
  margin: 0;
  padding: 0;
  background: #ffffff;
- height: 100vh;
+ height: 100dvh;
  overflow: hidden;
  -webkit-overflow-scrolling: touch;
 }
@@ -53,13 +53,12 @@ border-radius: 50%;
 filter: blur(90px);
 pointer-events: none;
 animation: floatGlow 14s infinite ease-in-out;
-transform: translateZ(0);
 }
 
 .glow-one {
     width: 350px;
     height: 350px;
-    background: rgba(168, 85, 247, 0.12);/
+    background: rgba(168, 85, 247, 0.12);
     top: -80px;
     left: -80px;
 }
@@ -152,7 +151,6 @@ position: relative;
 overflow: hidden;  
 display: flex;  
 flex-direction: column;
-overflow: hidden;
 border-left: 2px solid blue
 }
 
@@ -175,15 +173,6 @@ border-left: 2px solid blue
         margin: 0 auto;  
     }
     
-    .social-footer {  
-        margin-top: 0;
-        padding-bottom: 0;
-    }
-    
-    #signup-screen .social-footer {
-        margin-top: auto !important;
-        margin-bottom: 0 !important;
-    }
 }
 
 /* Top Premium Blob Background Decor */  
@@ -212,18 +201,36 @@ border-left: 2px solid blue
     backface-visibility: hidden;
 }  
 
-    .auth-screen {  
-        width: 50%;  
-        height: auto;  
-        height: 100%;
-        padding: 40px 32px;  
-        display: flex;  
-        flex-direction: column;  
-        position: relative;  
-        transform: translateZ(0); 
-        contain: content;
-        overflow: hidden;
-    }  
+    .auth-screen {
+    width: 50%;
+    height: 100%;
+    padding: 40px 32px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.screen-footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.social-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 0;
+}
 
     /* Top bar Back Arrow */  
     .top-bar {  
@@ -275,11 +282,6 @@ border-left: 2px solid blue
 
     .header-section p span:hover {  
         text-decoration: underline;  
-    }  
-
-    /* Form Wrapper */  
-    .form-container {  
-        flex-grow: 0;  
     }  
 
     /* Input Styles matching Image exactly */  
@@ -406,14 +408,6 @@ border-left: 2px solid blue
     }  
 
     /* Social Authentication Footer Inside Screens */  
-    .social-footer {  
-        display: flex;  
-        justify-content: center;  
-        align-items: center;  
-        gap: 24px;  
-        margin-top: 50px;  
-        padding-bottom: 20px;  
-    }
 
     .social-icon {  
         width: 42px;  
@@ -520,4 +514,26 @@ body.mobile-landscape .social-footer {
     margin-top: 30px !important;
     margin-bottom: 0;
     padding-bottom: 20px !important;
+}
+
+body.mobile-desktop .auth-screen {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+body.mobile-desktop .screen-main {
+    min-height: 420px !important;
+}
+
+body.mobile-desktop .screen-footer {
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding-top: 50px !important;
+    padding-bottom: 0 !important;
+}
+
+body.mobile-desktop .social-footer {
+    margin-top: 0 !important;
 }
