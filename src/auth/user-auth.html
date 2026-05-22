@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in to StudioPro</title>
+
+    <link rel="stylesheet" href="../../css/global.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/auth.css" />
+</head>
+<body>
+  
+  <div class="auth">
+  <section class="auth-showcase">
+
+    <div class="showcase-glow glow-one"></div>
+    <div class="showcase-glow glow-two"></div>
+    <div class="showcase-glow glow-three"></div>
+
+    <div class="showcase-content">
+
+        <div class="header-brand auth-brand-logo">
+            <i class="fa-solid fa-wand-magic-sparkles brand-icon"></i>
+            <span class="brand-text">
+                Studio<span class="gradient-text">Pro</span>
+            </span>
+        </div>
+
+        <div class="showcase-copy">
+            <h1>
+                Design websites visually.
+            </h1>
+
+            <p>
+                Build stunning websites like Canva and Photoshop style editing,
+                with AI assistance whenever you need it.
+            </p>
+        </div>
+
+        <div class="showcase-preview">
+            <img
+                src="../../assets/images/auth-preview.png"
+                alt="StudioPro Website Builder Preview">
+        </div>
+        </div>
+
+</section>
+
+    <div class="auth-container" id="authContainer">
+        <div class="auth-bg-glow"></div>
+
+        <div class="auth-slider">
+            
+            <div class="auth-screen" id="login-screen">
+                <div class="top-bar"></div>
+
+                <div class="header-section">
+                    <h1>Login</h1>
+                    <p>Don't have an account? <span id="switchToSignup">sign up</span></p>
+                </div>
+
+                <div class="form-container">
+                    <form onsubmit="event.preventDefault();">
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope input-icon"></i>
+                            <div class="input-divider"></div>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-wrapper">
+    <i class="fa-solid fa-lock input-icon"></i>
+    <div class="input-divider"></div>
+    <input type="password" placeholder="Password" required>
+</div>
+
+
+                        <div class="forgot-container">
+                            <a href="#" class="forgot-pass-link">Forgot Password?</a>
+                        </div>
+
+                        <div class="submit-section">
+                            <button type="submit" class="submit-btn">
+                                Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="social-footer">
+                    <a href="#" class="social-icon apple"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="social-icon google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="auth-screen" id="signup-screen">
+                <div class="top-bar">
+                    <button class="back-btn" id="backToLogin">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+
+                <div class="header-section">
+                    <h1>Create account</h1>
+                    <p>Already have an account? <span id="switchToLogin">sign in</span></p>
+                </div>
+
+                <div class="form-container">
+                    <form onsubmit="event.preventDefault();">
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user input-icon"></i>
+                            <div class="input-divider"></div>
+                            <input type="text" placeholder="Name" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope input-icon"></i>
+                            <div class="input-divider"></div>
+                            <input type="email" placeholder="Email or phone" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <div class="input-divider"></div>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+
+                        <div class="submit-section">
+                            <button type="submit" class="submit-btn">
+                                Sign up <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="social-footer">
+                    <a href="#" class="social-icon apple"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="social-icon google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    
+    <script src="../../js/auth.js"></script>
+    </body>
+</html>

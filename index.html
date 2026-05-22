@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudioPro</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+        <!-- MOBILE LEFT MENU -->
+        <button class="mobile-menu-toggle interactive-btn" id="mobileMenuBtn" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- LOGO -->
+        <div class="header-brand">
+            <i class="fa-solid fa-wand-magic-sparkles brand-icon"></i>
+            <span class="brand-text">
+                Studio<span class="gradient-text">Pro</span>
+            </span>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="desktop-navigation">
+            <button class="nav-link interactive-btn active" data-nav="home">Home</button>
+            <button class="nav-link interactive-btn" data-nav="about">About</button>
+            <button class="nav-link interactive-btn" data-nav="features">Features</button>
+            <button class="nav-link interactive-btn" data-nav="contact">Contact</button>
+        </nav>
+
+        <!-- PROFILE -->
+        <div class="header-actions">
+            <button class="profile-button interactive-btn" id="profileBtn" aria-label="Profile">
+                <i class="fa-regular fa-user"></i>
+            </button>
+        </div>
+
+        <!-- DESKTOP RIGHT MENU -->
+        <button class="desktop-menu-toggle interactive-btn" id="desktopMenuBtn" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- SIDE DRAWER -->
+<aside class="side-drawer" id="sideDrawer">
+
+    <!-- TOP -->
+    <div class="drawer-top-section">
+
+        <div class="drawer-logo">
+            <i class="fa-solid fa-wand-magic-sparkles brand-icon"></i>
+            <span class="brand-text">
+                Studio<span class="gradient-text">Pro</span>
+            </span>
+        </div>
+
+        <div class="drawer-divider"></div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="drawer-center-section">
+
+        <button class="drawer-nav-item active" data-drawer="home">
+            <img src="assets/icons/home.svg" alt="Home">
+            <span>Home</span>
+        </button>
+
+        <button class="drawer-nav-item" data-drawer="about">
+            <img src="assets/icons/about.svg" alt="About">
+            <span>About</span>
+        </button>
+
+        <button class="drawer-nav-item" data-drawer="features">
+            <img src="assets/icons/features.svg" alt="Features">
+            <span>Features</span>
+        </button>
+
+        <button class="drawer-nav-item" data-drawer="contact">
+            <img src="assets/icons/contact.svg" alt="Contact">
+            <span>Contact Us</span>
+        </button>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="drawer-bottom-section">
+
+        <div class="drawer-divider"></div>
+
+        <button class="drawer-utility-item">
+            <img src="assets/icons/help.svg" alt="Help Center">
+            <span>Help Center</span>
+        </button>
+
+        <button class="drawer-utility-item">
+            <img src="assets/icons/settings.svg" alt="Settings">
+            <span>Settings</span>
+        </button>
+
+        <button class="drawer-utility-item logout-item">
+            <img src="assets/icons/logout.svg" alt="Log out">
+            <span>Log out</span>
+        </button>
+
+    </div>
+
+    <!-- COLLAPSE -->
+    <button class="drawer-collapse-btn interactive-btn" id="drawerCollapseBtn" aria-label="Close Menu">
+        <img src="assets/icons/arrow.svg" alt="Close">
+    </button>
+
+</aside>
+
+<script src="js/auth-guard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
