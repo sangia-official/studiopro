@@ -17,8 +17,6 @@
      -webkit-tap-highlight-color: transparent;  
  }
 
-
-
 body {
  margin: 0;
  padding: 0;
@@ -175,6 +173,16 @@ border-left: 2px solid blue
         min-height: 100vh;
         max-width: 412px;  
         margin: 0 auto;  
+    }
+    
+    .social-footer {  
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    
+    #signup-screen .social-footer {
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -406,12 +414,6 @@ border-left: 2px solid blue
         margin-top: 50px;  
         padding-bottom: 20px;  
     }
-    
-    @media (max-width: 768px) {
-    .social-footer {  
-        margin-top: auto;
-    }
-}
 
     .social-icon {  
         width: 42px;  
@@ -437,11 +439,31 @@ border-left: 2px solid blue
     .social-icon.facebook i { color: #1877f2; font-size: 20px; }  
     .social-icon.google i { color: #ea4335; font-size: 18px; }  
 
-    /* Logic to shift view based on Active Screen */  
-    .auth-container.signup-active .auth-slider {  
-transform: translateX(-50%);
+    /* --- PREMIUM CORNER ANIMATION FOR ALL SCREENS (DESKTOP & MOBILE) --- */
 
+.auth-container.signup-active .auth-slider {
+    transform: translate3d(-50%, 0, 0) !important;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+.auth-container.signup-active #login-screen {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#signup-screen {
+    transform-origin: bottom left;
+    transform: scale(0.9) translate3d(-20px, 20px, 0);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+}
+
+.auth-container.signup-active #signup-screen {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+}
+
 
 /* Mobile view */
 
@@ -496,5 +518,6 @@ body.mobile-landscape .auth-screen {
 
 body.mobile-landscape .social-footer {
     margin-top: 30px !important;
+    margin-bottom: 0;
     padding-bottom: 20px !important;
 }
